@@ -22,10 +22,10 @@ To change the default number of threads from 8, set the environment variable OMP
 ```
 $ cd docker.STREAM
 $ docker build -t stream ./
-$ docker run -it --rm [-e OMP_NU_THREADS=<n> ] stream
+$ docker run -it --rm [-e OMP_NU_THREADS=<n>] stream
 ```
 
-### linpack
+### LINPACK
 
 LINPACK is a benchmark program is a measure of a system's floating point computing power.
 The default array size is 200.  To change the array size, set the environment variable LINPACK_ARRAY_SIZE. 
