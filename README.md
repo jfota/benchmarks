@@ -14,16 +14,6 @@ $ docker build -t graph500 ./
 $ docker run -it --rm [-e TMPFILE=<filename>] [-e REUSEFILE=1] graph500 <scalar>
 ```
 
-### STREAM
-
-STREAM is a benchmark program for measuring sustained memory bandwidth.  
-To change the default number of threads from 8, set the environment variable OMP_NUM_THREADS
-
-```
-$ cd docker.STREAM
-$ docker build -t stream ./
-$ docker run -it --rm [-e OMP_NU_THREADS=<n>] stream
-```
 
 ### LINPACK
 
@@ -37,4 +27,30 @@ $ cd docker.linpack
 $ docker build -t linpack ./
 $ docker run -it --rm [-e LINPACK_ARRAY_SIZE=<n>] linpack 
 ```
+
+
+### NAS
+
+NAS is a benchmark program
+
+#### To build and run NAS
+
+```
+$ cd docker.NAS
+$ docker build -t nas ./
+$ docker run -it --rm nas 
+```
+
+
+### STREAM
+
+STREAM is a benchmark program for measuring sustained memory bandwidth.  
+To change the default number of threads from 8, set the environment variable OMP_NUM_THREADS
+
+```
+$ cd docker.STREAM
+$ docker build -t stream ./
+$ docker run -it --rm [-e OMP_NU_THREADS=<n>] stream
+```
+
 
