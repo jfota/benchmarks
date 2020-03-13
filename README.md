@@ -8,6 +8,7 @@ The dockerfiles in this repo are merely wrappers around other people's work.  Th
 Graph500 is a performance benchmark.  The binary *requires* an integer parameter which is the scale of the graph
 If you want to store/read generated graph from/to file use environment variables TMPFILE=<filename> and also REUSEFILE=1 to keep the file.
 
+##### To build and run Graph500
 ```
 $ cd graph500
 $ docker build -t graph500 ./
@@ -20,7 +21,7 @@ $ docker run -it --rm [-e TMPFILE=<filename>] [-e REUSEFILE=1] graph500 <scalar>
 LINPACK is a benchmark program is a measure of a system's floating point computing power.
 The default array size is 200.  To change the array size, set the environment variable LINPACK_ARRAY_SIZE. 
 
-#### To build and run linpack
+##### To build and run LINPACK
 
 ```
 $ cd docker.linpack
@@ -33,8 +34,7 @@ $ docker run -it --rm [-e LINPACK_ARRAY_SIZE=<n>] linpack
 
 NAS is a benchmark program
 
-#### To build and run NAS
-
+##### To build and run NAS
 ```
 $ cd docker.NAS
 $ docker build -t nas ./
@@ -47,6 +47,7 @@ $ docker run -it --rm nas
 STREAM is a benchmark program for measuring sustained memory bandwidth.  
 To change the default number of threads from 8, set the environment variable OMP_NUM_THREADS
 
+##### To build and run STREAM
 ```
 $ cd docker.STREAM
 $ docker build -t stream ./
